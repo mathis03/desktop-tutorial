@@ -53,7 +53,22 @@ def Tester_Alignement(tableau, ligne, colonne, joueur):
         return True
     
     #test alignement diagonale gauche et droite
-     
+     compteur=1
+    colonne_joue=colonne
+    while colonne>1  and tableau[ligne][colonne-1]==tableau[ligne][colonne-2]:
+        compteur=compteur+1
+        colonne=colonne-1
+        
+        
+    ligne=ligne_joue    
+    colonne=colonne_joue    
+    while colonne<7 and tableau[ligne][colonne-1]==tableau[ligne][colonne]:
+        compteur=compteur+1
+        colonne=colonne+1
+        
+        
+    if compteur>=4:
+        return True
     
     
     
