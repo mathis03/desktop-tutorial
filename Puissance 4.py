@@ -53,7 +53,7 @@ def Tester_Alignement(tableau, ligne, colonne, joueur):
         return True
     
     #test alignement diagonale gauche et droite
-     compteur=1
+'''    compteur=1
     colonne_joue=colonne
     while colonne>1  and tableau[ligne][colonne-1]==tableau[ligne][colonne-2]:
         compteur=compteur+1
@@ -69,7 +69,7 @@ def Tester_Alignement(tableau, ligne, colonne, joueur):
         
     if compteur>=4:
         return True
-    
+    '''
     
     
 def Changer_Joueur(joueur):
@@ -80,7 +80,7 @@ def Changer_Joueur(joueur):
     return joueur
 
 def Afficher_Vainqueur(joueur):
-    print("Bravo : ",joueur)
+    print("Bravo joueur",joueur, "vous avez gagné !")
 #######################
 # Programme principal #
 #######################
@@ -95,7 +95,8 @@ while not aligne :
     
     aligne=Tester_Alignement(tableau, ligne, colonne, joueur)
     
-    joueur=Changer_Joueur(joueur)
+    if aligne ==  None :
+        joueur=Changer_Joueur(joueur)
 
 Afficher_Vainqueur(joueur)
   
