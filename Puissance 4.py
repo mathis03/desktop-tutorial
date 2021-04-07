@@ -79,6 +79,8 @@ def Changer_Joueur(joueur):
         joueur=1
     return joueur
 
+def Afficher_Vainqueur(joueur):
+    print("Bravo : ",joueur)
 #######################
 # Programme principal #
 #######################
